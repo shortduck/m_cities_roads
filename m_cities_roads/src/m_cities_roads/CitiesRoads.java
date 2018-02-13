@@ -25,7 +25,7 @@ public class CitiesRoads {
 		ArrayList<Integer> returnNearCities = new ArrayList<Integer>();
 
 		// get Capital
-		for (int i = 0; i < T.length - 1; i++) {
+		for (int i = 0; i < T.length ; i++) {
 			if (T[i] == i)
 				capital = i;
 		}
@@ -51,9 +51,9 @@ public class CitiesRoads {
 					currentCity = queue.remove();
 			}
 
-			for (int j = 0; j < T.length - 1; j++) {
+			for (int j = 0; j < T.length ; j++) {
 
-				if (T[j] == currentCity && currentCity != capital) {
+				if (T[j] == currentCity && T[j] != j) {
 					queue.add(j);
 					count++;
 				}
